@@ -1,5 +1,8 @@
 use std::collections::HashMap;
 
+#[cfg(test)]
+mod tests;
+
 pub fn has_dups(line: String) -> bool {
     let mut occurences = HashMap::new();
     for word in line.split_whitespace() {
