@@ -6,4 +6,5 @@ env:
   - TEST_DIR=2017/day_3
   - TEST_DIR=2017/day_4
   - TEST_DIR=2017/day_5
+  - TEST_DIR=2017/day_6
 script: cd $TEST_DIR && cargo test --verbose --all 
