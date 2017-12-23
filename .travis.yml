@@ -1,0 +1,5 @@
+language: rust
+env:
+  - TEST_DIR=2017/day_1
+  - TEST_DIR=2017/day_5
+script: cd $TEST_DIR && cargo test --verbose --all 
