@@ -25,6 +25,8 @@ fn input_to_arr() -> Vec<u32> {
 fn main() {
     let numbers = input_to_arr();
     let res = captcha::sum(&numbers);
+    let res2 = captcha::sum_by_half(&numbers);
 
     println!("{}", res);
+    println!("{}", res2);
 }
