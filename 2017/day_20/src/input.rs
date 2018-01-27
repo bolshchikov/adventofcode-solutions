@@ -23,4 +23,11 @@ pub fn _get_example_1_input() -> Vec<particle::Particle> {
     vec![p1, p2]
 }
 
-// pub fn _get_example_2_input() -> Vec<particle::Particle> {}
+pub fn _get_example_2_input() -> Vec<particle::Particle> {
+    let p1 = particle::create_particle(String::from("p=<-6,0,0>, v=<3,0,0>, a=<0,0,0>"));
+    let p2 = particle::create_particle(String::from("p=<-4,0,0>, v=<2,0,0>, a=<0,0,0>"));
+    let p3 = particle::create_particle(String::from("p=<-2,0,0>, v=<1,0,0>, a=<0,0,0>"));
+    let p4 = particle::create_particle(String::from("p=<3,0,0>, v=<-1,0,0>, a=<0,0,0>"));
+
+    vec![p1, p2, p3, p4]
+}

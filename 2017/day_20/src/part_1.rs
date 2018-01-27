@@ -1,5 +1,5 @@
-use particle;
 use input;
+use particle;
 
 fn is_stable(arr: &Vec<i32>) -> bool {
     let mut cloned = arr.clone();

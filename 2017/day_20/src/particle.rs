@@ -1,7 +1,11 @@
+#[derive(Debug)]
 struct Position(i32, i32, i32);
+#[derive(Debug)]
 struct Velocity(i32, i32, i32);
+#[derive(Debug)]
 struct Acceleration(i32, i32, i32);
 
+#[derive(Debug)]
 pub struct Particle {
     position: Position,
     velocity: Velocity,
@@ -38,6 +42,14 @@ impl Particle {
     pub fn distance(&self) -> i32 {
         &self.position.0.abs() + &self.position.1.abs() + &self.position.2.abs()
     }
+
+    pub fn eq(&self, particle: &Particle) -> bool {
+        &self.position.0 == &particle.position.0 &&
+        &self.position.1 == &particle.position.1 &&
+        &self.position.2 == &particle.position.2
+    }
+
+
 }
 
 pub fn create_particle(coordinates: String) -> Particle {

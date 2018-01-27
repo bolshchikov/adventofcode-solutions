@@ -1,7 +1,8 @@
 mod particle;
 mod input;
 mod part_1;
+mod part_2;
 
 fn main() {
-    println!("{:?}", part_1::get_closest_particle());
+    println!("{:?}", part_2::get_survived_particles());
 }
