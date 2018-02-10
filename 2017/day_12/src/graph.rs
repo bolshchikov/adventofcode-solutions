@@ -34,3 +34,20 @@ pub fn traverse(graph: &HashMap<i32, Vec<i32>>, start: i32) -> Vec<i32> {
     }
     visited
 }
+
+pub fn trees(graph: &HashMap<i32, Vec<i32>>) -> Vec<Vec<i32>> {
+    let mut visited: Vec<i32> = Vec::new();
+    let mut trees: Vec<Vec<i32>> = Vec::new();
+
+    let mut keys: Vec<&i32> = graph.keys().collect();
+    keys.sort();
+
+    for id in keys {
+        if !visited.contains(&id) {
+            let tree = traverse(graph, *id);
+            visited.extend_from_slice(&tree);
+            trees.push(tree);
+        }
+    }
+    trees
+}
