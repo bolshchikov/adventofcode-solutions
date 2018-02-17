@@ -4,6 +4,7 @@ mod instruction;
 
 fn main() {
     let mut registry: HashMap<String, i32> = HashMap::new();
+    let mut max: i32 = 0;
 
     let instructions: Vec<instruction::Instruction> = input::get_input()
         .iter()
@@ -38,7 +39,11 @@ fn main() {
                 _ => panic!("unknown operation"),
             }
         }
-        // println!("{:?}", registry);
+        let current_max = *registry.values().max().unwrap();
+        if current_max > max {
+            max = current_max;
+        }
     }
+    println!("max value is {:?}", max);
     println!("{:?}", registry.values().max().unwrap());
 }
