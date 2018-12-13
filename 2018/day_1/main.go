@@ -1,7 +1,7 @@
 package main
 
 import (
-	readinput "adventofcode-solutions/2018/utils"
+	"adventofcode-solutions/2018/readinput"
 	"fmt"
 	"log"
 	"strconv"
@@ -43,7 +43,7 @@ func Part2(numbers []int) int {
 func main() {
 	var numbers []int
 
-	input := readinput.ReadToArray()
+	input := readinput.ReadToArray("input.txt")
 	for _, line := range input {
 		num, err := strconv.Atoi(line)
 		if err != nil {

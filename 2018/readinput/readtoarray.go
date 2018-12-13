@@ -7,8 +7,8 @@ import (
 )
 
 // ReadToArray parses input file into array by line
-func ReadToArray() []string {
-	file, err := os.Open("input.txt")
+func ReadToArray(filename string) []string {
+	file, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
 	}
